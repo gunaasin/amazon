@@ -242,6 +242,9 @@
 }
 
 .amazon-header-nav {
+  border: none;
+  text-align: left;
+  background-color: transparent;
   cursor: pointer;
 }
 .delivery-location-nav{

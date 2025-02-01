@@ -34,7 +34,14 @@
 .amazon-mobile-logo {
   display: none;
 }
+
+@media (max-width: 775px) {
+  .checkout-header {
+    height: 50px;
+  }
+}
 @media (max-width: 575px) {
+
   .checkout-header-left-section {
     width: auto;
   }

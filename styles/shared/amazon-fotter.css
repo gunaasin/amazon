@@ -111,6 +111,9 @@
 }
 
 @media (max-width: 768px) {
+    .backtotop{
+        font-size: 12px;
+    }
 
     .amazon-links{
         width: 80vw;
@@ -121,6 +124,14 @@
 
     .amazon-end{
         height: 70px;
+    }
+    .list li{
+        
+        font-size: 12px;
+    }
+
+    .list h2{
+        font-size: 14px;
     }
 
 }

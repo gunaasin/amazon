@@ -111,12 +111,12 @@ function loadNavBar(navInfo){
 
     const mobileNav = document.getElementById("amazon-nav-mobile");
     mobileNav.innerHTML = `
-    <div class="amazon-header-nav">
+    <button class="amazon-header-nav">
         <h3 class="update-location-nav"><i class="fas fa-map-marker-alt"></i> &nbsp;${address === null ? "Update location" : address}</h3>
         <p class="delivery-location-nav">
             ${name===null ? " update address" : `Deliver to ${name}` }
         </p>
-    </div>
+    </button>
     <div class="mobile-nav-element">
             <!-- menu -->
             <label class="hamburger">
@@ -147,12 +147,16 @@ const searchBarData = document.getElementById("search-bar");
 
         searchBtn.addEventListener("click", () => {
             let keyword = searchBarData.value.trim();
-            window.location.href = `amazon.html?ds=${encodeURIComponent(btoa(JSON.stringify(keyword)))}`;
+            window.location.href = `amazon?ds=${encodeURIComponent(btoa(JSON.stringify(keyword)))}`;
             
         })
 
         document.getElementById("nav-address").addEventListener("click",()=>{
-            window.location.href="/address.html";
+            window.location.href="/address";
+        })
+
+        document.querySelector(".amazon-header-nav").addEventListener("click",()=>{
+            window.location.href="/address";
         })
 
 
