@@ -40,7 +40,6 @@ function loadAddress() {
       }
 
       const res = await response.json();
-      console.log("Addresses fetched successfully:", res);
       return res;
     } catch (error) {
       console.error("Error fetching addresses:", error);
@@ -50,7 +49,6 @@ function loadAddress() {
   getAddressInfo().then((response) => {
     if (response) {
       getAddress = response;
-      console.log(getAddress.name)
       if(getAddress.name!==null) {
         addAddressCard.style.display = "none";
        }
@@ -97,7 +95,6 @@ addressForm.addEventListener("submit", (e) => {
       }
 
       const res = await response.json();
-      console.log("Address saved successfully:", res);
       renderAddresses();
       return res;
     } catch (error) {
