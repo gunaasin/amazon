@@ -1,0 +1,91 @@
+:root {
+    --amazon-orange: #FF9900;
+    --amazon-blue: #0f0f0f;
+    --background-gray: #ffffff;
+    --text-primary: #111111;
+    --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    /* padding: 0; */
+    /* box-sizing: border-box; */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-gray);
+    color: var(--text-primary);
+}
+
+#app {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+header {
+    padding: 20px 0;
+}
+
+header h1 {
+    font-weight: 510;
+    font-size: 28px;
+    color: var(--text-primary);
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.card {
+    line-height: 1.6;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    border: 0.3px solid rgb(212, 212, 212);
+    transition:  0.2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: rgba(232, 232, 232, 0.696);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); */
+
+}
+
+.card-box{
+    display: flex;
+}
+
+.img-Container img{
+    width: 40px; 
+    object-fit: contain;
+    padding-right:10px ;
+}
+
+.card h2 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--amazon-blue);
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    #app {
+        padding: 10px;
+    }
+}

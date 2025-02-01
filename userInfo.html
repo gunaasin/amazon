@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Security - Amazon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./images/amazon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/shared/amazon-fotter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/pages/userInfo.css">
+</head>
+
+<body>
+    <div class="amazon-header" id="amazon-nav"></div>
+    <div class="amazon-header-mobile" id="amazon-nav-mobile"></div>
+    <div id="app">
+        <h1>Login and Security</h1>
+        <div class="security-container">
+
+            <div class="security-section">
+                <div class="section-header">
+                    <div class="information">
+                        <h2>Name</h2>
+                        <span class="value" id="nameValue"></span>
+                    </div>
+                    <button class="edit-btn" data-field="name">Edit</button>
+                </div>
+                <div class="edit-form" id="nameForm" style="display: none;">
+                    <input type="text" id="nameInput" value="Guna" class="edit-input">
+                    <div class="button-group">
+                        <button class="save-btn" data-field="name">Save Changes</button>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="section-header">
+                    <div class="information">
+                        <h2>Email</h2>
+                        <span class="value" id="emailValue" style="display: none;"></span>
+                        <p class="description" id="emailDescription">For stronger account security, add your email. If
+                            there's an unusual sign-in, we'll email you and verify that it's really you.</p>
+
+                    </div>
+                    <button class="add-btn" data-field="email">Add</button>
+                </div>
+                <div class="edit-form" id="emailForm" style="display: none;">
+                    <input type="email" id="emailInput" placeholder="Enter your email" class="edit-input">
+                    <div class="button-group">
+                        <button class="save-btn" data-field="email">Save Changes</button>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="section-header">
+                    <div class="information">
+                        <h2>Primary mobile number</h2>
+                        <span class="value" id="phoneValue">+918838620637</span>
+                        <p class="description">Easily recover passwords and receive security
+                            notifications with this mobile number.</p>
+                    </div>
+
+                    <button class="edit-btn" data-field="phone">Edit</button>
+                </div>
+                <div class="edit-form" id="phoneForm" style="display: none;">
+                    <input type="tel" id="phoneInput" value="+918838620637" class="edit-input">
+                    <div class="button-group">
+                        <button class="save-btn" data-field="phone">Save Changes</button>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="section-header">
+                    <div class="information">
+                        <h2>Password</h2>
+                        <span class="value">••••••••</span>
+                    </div>
+                    <button class="edit-btn" data-field="password">Edit</button>
+                </div>
+                <div class="edit-form" id="passwordForm" style="display: none;">
+                    <input type="password" placeholder="Current password" class="edit-input">
+                    <input type="password" placeholder="New password" class="edit-input">
+                    <input type="password" placeholder="Confirm new password" class="edit-input">
+                    <div class="button-group">
+                        <button class="save-btn" data-field="password">Save Changes</button>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="section-header">
+                    <div class="information">
+                        <h2>2-step verification</h2>
+                        <p class="description">Add a layer of security. Require a code in addition to your password.</p>
+                    </div>
+
+                    <button class="enable-btn" data-field="2step">Turn on</button>
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="section-header">
+                    <div class="information">
+                        <h2>Compromised account?</h2>
+                        <p class="description">Take steps like changing your password and signing out everywhere.</p>
+                    </div>
+
+                    <button class="start-btn" data-field="compromised">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="amazon-footer" id="fotter"></div>
+    <script type="module" src="./scripts/userInfo.js"></script>
+</body>
+
+</html>

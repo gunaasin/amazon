@@ -1,0 +1,128 @@
+/* Amazon-specific styles */
+ :root {
+    --amazon-orange: #FF9900;
+    --amazon-dark: #232F3E;
+    --amazon-light: #FEBD69;
+    --amazon-border: #DDD;
+    --amazon-button: #FFD814;
+    --amazon-button-hover: #F7CA00;
+    --amazon-link: #0066c0;
+  }
+  
+  .header {
+
+    background-color: var(--amazon-dark);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(202, 202, 202);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .header h1{
+    margin: 0px 10px;
+    margin-top: -10px;
+    font-size: 24px;
+  }
+
+  .header img{
+    width: 100px;
+  }
+  
+  .product-form {
+    border: 0.3px solid rgb(214, 214, 214);
+    background: white;
+    margin: 20px auto;
+    padding: 20px 25px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .form-header {
+    color: var(--amazon-dark);
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    padding-bottom: 4px;
+  }
+  
+  .form-group {
+    margin-bottom: 14px;
+  }
+  
+  label {
+    display: block;
+    padding-bottom: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #111;
+  }
+  
+  input, textarea, select {
+    width: 97%;
+    padding: 3px 7px;
+    line-height: normal;
+    border: 1px solid #D5D9D9;
+    border-radius: 3px;
+    font-size: 13px;
+    height: 31px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    height: auto;
+  }
+  
+  input:focus, select:focus , textarea:focus {
+    border-color: #3F7D88;
+    outline-color: #3F7D88;
+    box-shadow: 0 0 0px 3px #3F7D88;
+}
+  
+  .submit-btn {
+    background: var(--amazon-button);
+    border: 1px solid #FCD200;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px 0 rgba(213,217,217,.5);
+    cursor: pointer;
+    width: 100%;
+    height: 31px;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background: var(--amazon-button-hover);
+  }
+  
+  .rating-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .rating-input {
+    width: 80px;
+  }
+  
+  .required {
+    color: #c40000;
+    margin-left: 2px;
+  }
+  
+  .help-text {
+    color: #555;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .stars{
+    font-size: 18px;
+    color: #e77600;
+  }

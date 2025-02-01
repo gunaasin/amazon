@@ -1,0 +1,381 @@
+/* Reviews Container */
+.reviews-container {
+    max-width:1500px;
+    padding: 20px;
+    display: flex;
+    justify-content: left;
+    font-family: Arial, sans-serif;
+}
+
+/* Reviews Summary */
+.reviews-summary {
+    width: 25vw;
+    border-right: 1px solid #e7e7e7;
+    padding:  20px;
+    /* margin-bottom: 20px; */
+}
+
+.reviews-summary h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+.peoduct-review-customer{
+    padding-top: 20px;
+}
+
+.peoduct-review-customer h2{
+    font-size: 22px;
+}
+.peoduct-review-customer p{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.rating-overview {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.average-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stars {
+    color: #FFA41C;
+    font-size: 20px;
+}
+
+.rating-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total-ratings {
+    color: #565959;
+}
+
+/* Write Review Button */
+.write-review-button {
+    background-color: transparent;
+    border: 0.5px solid gray;
+    padding: 6px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: rgb(62, 62, 62);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Rating Bars */
+.rating-bars {
+    max-width: 500px;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 10px;
+}
+
+.star-label {
+    width: 60px;
+    text-align: right;
+}
+
+.bar-container {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #f0f2f2;
+    border-radius: 4px;
+}
+
+.bar {
+    height: 100%;
+    background-color: #FFA41C;
+    border-radius: 4px;
+}
+
+.percentage {
+    width: 40px;
+}
+
+/* Write Review Section */
+.write-review {
+    padding: 20px;
+}
+
+.write-review h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.rating-input {
+    margin-bottom: 20px;
+}
+
+.star-rating {
+    font-size: 24px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.star-rating .star {
+    padding: 0 5px;
+}
+
+.star-rating .star.active {
+    color: #ffa41c;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 96%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+    
+}
+
+.submit-review {
+    background-color: #ffd814;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.submit-review:hover {
+    background-color: #f7ca00;
+}
+
+/* Reviews List */
+.review {
+    width: 50vw;
+    /* border-bottom: 1px solid #e7e7e7; */
+    padding: 20px ;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.reviewer-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #f0f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewer-name {
+    font-weight: bold;
+}
+
+.review-rating {
+    color: #ffa41c;
+    margin-bottom: 8px;
+}
+
+.review-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.review-date {
+    color: #565959;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.review-content {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.review-helpful {
+    font-size: 14px;
+    color: #565959;
+}
+
+.helpful-button {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.helpful-button:hover {
+    background-color: #f7fafa;
+}
+
+
+/* xl */
+@media (max-width:1280px) {
+    .reviews-container {
+        width: 90vw;
+        padding: 20px;
+        display: flex;
+    }
+
+    .reviews-summary {
+        width: 1300px;
+    }
+
+    .review {
+        width: 80%;
+    }
+}
+/* md */
+@media (max-width:900px) {
+    .reviews-summary {
+        width: 90%;
+    }
+
+    .review {
+        width: 80%;
+    }
+
+    .reviews-summary {
+        width: 20%;
+        border-right: 0px solid #e7e7e7;
+        border-bottom: 1px solid #e7e7e7;
+        padding:  20px;
+        /* margin-bottom: 20px; */
+    }
+    
+    .modal-content {
+        max-width: 500px;
+        position: relative;
+        top: 120px;
+    }
+}
+/* md */
+@media (max-width:768px) {
+    .reviews-container {
+        width: 83vw;
+        /* padding: 10px; */
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .reviews-summary {
+        width: 100%;
+    }
+
+    .review {
+        width: 100%;
+    }
+    .reviews-summary {
+        width: 100%;
+        position: relative;
+        left: -30px;
+    }
+
+    .review {
+        position: relative;
+        left: -50px;
+        width: 100%;
+    }
+
+    .modal-content {
+        max-width: 60%;
+        top: 100px;
+  
+    }
+}
+/* sm */
+@media (max-width:640px) {
+    .modal-content {
+        max-width: 80%;
+        top: 100px;
+    }
+}
+/* xsm*/
+@media (max-width: 475px) {
+    .form-group input,
+.form-group textarea {
+    width: 94%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon signup</title>
+    <link rel="stylesheet" href="styles/pages/auth.css">
+    <link rel="stylesheet" href="styles/pages/signup.css">
+    <link rel="shortcut icon" href="./images/amazon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="logo">
+            <img src="./images/amazon-logo.png" alt="Amazon">
+        </div>
+
+        <div class="auth-box">
+            <h1>Create account</h1>
+
+            <form class="auth-form" method="post" id="signup-form">
+                <div class="form-group">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" placeholder="First and last name">
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile number</label>
+                    <div class="mobile-input">
+                        <select class="country-code">
+                            <option value="+91">+91</option>
+                        </select>
+                        <input type="tel" id="mobile" name="mobile">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="At least 6 characters">
+                    <div class="password-hint">
+                    </div>
+                </div>
+
+                <button id="submit" class="auth-button">
+                    <span class="button-text">Continue</span>
+                    <span class="spinner" style="display: none;">Loading...</span>
+                </button>
+
+                <div class="legal-text">
+                    By creating an account, you agree to Amazon's <a href="#">Conditions of Use</a> and <a
+                        href="#">Privacy Notice</a>.
+                </div>
+
+                <div class="signin-link">
+                    Already have an account? <a href="signin">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/security/signup.js" type="module"></script>
+</body>
+
+</html>

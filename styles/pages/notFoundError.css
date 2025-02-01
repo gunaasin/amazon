@@ -1,0 +1,83 @@
+:root {
+    --amazon-orange: #FF9900;
+    --amazon-dark: #131921;
+    --amazon-light-gray: #f3f3f3;
+    --amazon-text: #0F1111;
+  }
+  
+  .amazon-container {
+    /* height: 90vh; */
+    /* width: 100%; */
+    padding: 2rem;
+    text-align: center;
+    
+  }
+  .not-found-container{
+    text-align: center;
+    width: 100%;
+    padding: 5rem;
+  }
+  
+  .error-box {
+    margin: 4rem 0;
+  }
+  .error-box img{
+    width: 300px;
+  }
+  
+  .error-title {
+    font-size: 4rem;
+    color: var(--amazon-orange);
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .error-subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--amazon-text);
+  }
+  
+  .error-message {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #565959;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .link {
+    color: #007185;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    color: var(--amazon-orange);
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .error-title {
+      font-size: 4rem;
+    }
+    
+    .error-subtitle {
+      font-size: 1.5rem;
+    }
+    .error-box img{
+      width: 200px;
+    }
+    
+    .links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }

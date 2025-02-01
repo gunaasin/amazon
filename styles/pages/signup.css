@@ -1,0 +1,57 @@
+/* Signup page specific styles */
+.mobile-input {
+    display: flex;
+    gap: 4px;
+}
+
+.mobile-input input{
+    margin-top: 0px;
+}
+
+.country-code {
+    width: 70px;
+    height: 31px;
+    padding: 3px 7px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    background: #f0f0f0;
+    font-size: 13px;
+}
+
+.password-hint {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #2b2b2b;
+    display: flex;
+    align-items: start;
+    gap: 5px;
+}
+
+.info-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #949494;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 14px;
+    font-style: italic;
+    font-size: 10px;
+    color: #555;
+}
+
+.signin-link {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #111;
+}
+
+.signin-link a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.signin-link a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}

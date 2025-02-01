@@ -1,0 +1,149 @@
+.amazon-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 80vh; */
+    background-color: #232F3E;
+}
+.backtotop{
+    height: 60px;
+    color: aliceblue;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    background-color: #3b495b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+
+    &:hover{
+        background-color: #405166;
+    }
+}
+.amazon-links{
+    width: 70vw;
+    height: 120%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: rgb(255, 251, 240);
+    justify-content: space-around;
+}
+.list{
+    padding-bottom: 30px;
+    width: 200px;
+    list-style: none;
+}
+.list h2{
+    font-size: 16px;
+    font-weight: 650;
+    margin: 10px 0px;
+}
+.list li{
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 3px 0px;
+    padding: 2px 0px;
+    color: #fffbf0c3;
+
+     &:hover{
+         text-decoration: 0.5px underline;
+     }
+}
+
+.amazon-end{
+    border-top: 0.3px solid rgba(57, 63, 87, 0.95);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amazon-end .log{
+    cursor: pointer;
+    margin:0px 25px;
+    width: 70px;
+}
+.amazon-end div{
+    position: relative;
+    top: -4px;
+    margin: 0px 25px ;
+    cursor: pointer;
+    display: flex;
+    color: white;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    border-radius: 2px;
+    height: 30px;
+    border: 1px solid gray;
+}
+.amazon-end div img{
+    width: 20px;
+    cursor: pointer;
+    padding: 0px 2px;
+}
+.end{
+    width: 100%;
+    height: 200px;
+    background-color: #131A22;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: azure;
+}
+.end p{
+    padding: 2px;
+    font-size: 10px;
+    &:hover{
+        color: gray;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .amazon-links{
+        width: 80vw;
+    }
+    .backtotop{
+        height: 50px;
+    }
+
+    .amazon-end{
+        height: 70px;
+    }
+
+}
+
+@media (max-width: 568px) {
+    .amazon-links{
+        position: relative;
+        left: -70px;
+    }
+}
+
+@media (max-width: 475px) {
+
+    .amazon-links{
+        position: relative;
+        left: -70px;
+    }
+}
+
+@media (max-width: 355px) {
+
+    .amazon-links{
+        position: relative;
+        left: -50px;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product Page</title>
+    <link rel="stylesheet" href="styles/pages/product.css">
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/shared/amazon-fotter.css">
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/pages/notFoundError.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/pages/review.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./images/amazon.png" type="image/x-icon">
+
+</head>
+<body class="amazon-body">
+    <div class="amazon-header" id="amazon-nav"></div>
+    <div class="amazon-header-mobile" id="amazon-nav-mobile"></div>
+    <div class="container">
+
+        <div class="product-grid">
+            <!-- product html provide by js -->
+        </div>
+
+        <div class="reviews-container">
+            <!-- reviews -->
+        </div>
+
+        <section class="related-products">
+            <h2>Products related to this item</h2>
+            <div class="products-grid"></div>
+        </section>
+        
+    </div>
+
+      <!-- footer -->
+
+      <div class="amazon-footer" id="fotter"></div>
+
+    <script type="module" src="./scripts/main-product.js"></script>
+</body>
+</html>

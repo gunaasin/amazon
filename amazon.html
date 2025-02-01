@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Amazon Project</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Load a font called Roboto from Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Here are the CSS files for this page. -->
+  <link rel="shortcut icon" href="./images/amazon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/shared/general.css">
+  <link rel="stylesheet" href="styles/shared/amazon-header.css">
+  <link rel="stylesheet" href="styles/pages/amazon.css">
+  <link rel="stylesheet" href="styles/shared/amazon-fotter.css">
+  <link rel="stylesheet" href="styles/pages/notFoundError.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="amazon-body">
+  <div class="amazon-header" id="amazon-nav">
+    <div class="amazon-header-left-section">
+      <a href="/" class="header-link">
+        <img class="amazon-logo" src="images/amazon-logo-white.png">
+        <img class="amazon-mobile-logo" src="images/amazon-mobile-logo-white.png">
+        <p class="nav-in-text">.in</p>
+      </a>
+
+    </div>
+
+    <div class="amazon-header-left-second">
+      <p class="delivery-location">
+        Delivering to Bengaluru 562129
+      </p>
+      <h3 class="update-location"><i class="fas fa-map-marker-alt"></i> &nbsp; Update location</h3>
+    </div>
+
+    <div class="amazon-header-middle-section">
+      <select id="options" class="landing-search-options">
+        <option value="All">
+          All
+        </option>
+        <option value="2">Clothing</option>
+        <option value="3">Amazon Devices</option>
+        <option value="4">Amazon Fashion</option>
+        <option value="5">Amazon Pharmacy</option>
+        <option value="6">Appliances</option>
+        <option value="7">Books</option>
+        <option value="8">Accessories</option>
+        <option value="9">Electronics</option>
+        <option value="10">Home & Kitchen</option>
+        <option value="11">Kindle Store</option>
+        <option value="12">Gift Cards</option>
+        <option value="13">Music</option>
+        <option value="14">Mobile</option>
+        <option value="15">Sports, Fitness & Outdoors</option>
+      </select>
+      <input class="search-bar" id="search-bar" type="text" placeholder="Search Amazon.in ">
+
+      <button class="search-button" id="search-btn">
+        <img class="search-icon" src="images/icons/search-icon.png">
+      </button>
+    </div>
+
+    <a href="signin" class="amazon-header-right-second">
+      <p class="sign-in-nav"> Hello, Sign in </p>
+      <h3 class="account-list-nav"> Account & list</h3>
+
+      
+    </a>
+
+    <div class="amazon-header-right-section">
+      <a class="orders-link header-link" href="orders">
+        <h2 class="orders-text"><span>Returns <br></span> & Orders</h2>
+      </a>
+
+
+      <a class="cart-link header-link" href="checkout">
+        <img class="cart-icon" src="images/icons/cart-icon.png">
+        <div class="cart-quantity"></div>
+        <div class="cart-text">Cart</div>
+      </a>
+    </div>
+  </div>
+  <div class="amazon-header-mobile" id="amazon-nav-mobile"></div>
+
+  <div class="main">
+
+    <div class="filter-section">
+    </div>
+    
+    <div class="product-not-found"></div>
+
+    <div class="products-grid js-product-container">
+    </div>
+
+  </div>
+
+  <div class="amazon-footer" id="fotter"></div>
+
+  <script type="module" src="scripts/amazon.js"></script>
+</body>
+
+</html>

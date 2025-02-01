@@ -1,0 +1,18 @@
+{
+    "rewrites": [
+      { "source": "/amazon", "destination": "/amazon.html" },
+      { "source": "/amazonUser", "destination": "/amazonUser.html" },
+      { "source": "/address", "destination": "/address.html" },
+      { "source": "/amazonUser", "destination": "/amazonUser.html" },
+      { "source": "/checkout", "destination": "/checkout.html" },
+      { "source": "/payment", "destination": "/payment.html" },
+      { "source": "/orders", "destination": "/orders.html" },
+      { "source": "/product", "destination": "/product.html" },
+      { "source": "/signin", "destination": "/signin.html" },
+      { "source": "/signup", "destination": "/signup.html" },
+      { "source": "/tracking", "destination": "/tracking.html" },
+      { "source": "/userInfo", "destination": "/userInfo.html" },
+      { "source": "/", "destination": "/index.html" }
+    ]
+}
+  
