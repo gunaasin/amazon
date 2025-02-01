@@ -20,6 +20,7 @@ export function loadProductFromBackend() {
 
     return response.json();
   }).then((productData) => {
+    products.length=0;
     products = productData.map((item) => {
       return item;
     });
