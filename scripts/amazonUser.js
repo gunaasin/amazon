@@ -55,6 +55,7 @@ function getToken() {
 // Logout function
 async function logout(token) {
     if (!token || !token.token) {
+        window.location.href="/signin";
         console.error("Invalid or missing token. Cannot logout.");
         return;
     }
