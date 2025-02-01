@@ -48,8 +48,7 @@ console.log(amount);
       }
       
       const data = await response.json();
-       const res = data.sessionUrl;
-       window.location.href ="/".concat(res);
+      window.location.href = data.sessionUrl;
     } catch (error) {
       window.location.href = "/signin";
       console.error("Payment error:", error);
