@@ -40,7 +40,7 @@ function loadAddress() {
       }
 
       const res = await response.json();
-    //   console.log("Addresses fetched successfully:", res);
+      console.log("Addresses fetched successfully:", res);
       return res;
     } catch (error) {
       console.error("Error fetching addresses:", error);
@@ -83,7 +83,7 @@ addressForm.addEventListener("submit", (e) => {
   const postAddress = async (addressData) => {
     try {
 
-      const response = await fetch("http://localhost:8080/api/address/add", {
+      const response = await fetch(`${API_END_POINT}api/address/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
