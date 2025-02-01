@@ -21,6 +21,7 @@ document.querySelector('.app').innerHTML = `
           <option value="Smartphones">Smartphones</option>
           <option value="home essentials">Home Essentials</option>
           <option value="clothing">Clothing</option>
+          <option value="fashion , jewels">fashion , jewels</option>
           <option value="books">Books</option>
           <option value="home">Home & Kitchen</option>
           <option value="toys">Toys & Games</option>
