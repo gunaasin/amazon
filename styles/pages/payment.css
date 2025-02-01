@@ -40,6 +40,8 @@ header {
     color: #747474;
 }
 
+
+
 .payment-container{
     width: 100%;
     height: 145vh;
@@ -217,16 +219,7 @@ header {
     font-size: 0.9em;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .checkout-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .order-summary {
-        position: static;
-    }
-}
+
 
 
 /* form doggle */
@@ -280,3 +273,26 @@ header {
     overflow: hidden;
   }
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-summary {
+        position: static;
+    }
+
+    .head-container img{
+        width: 70px;
+    }
+
+    .secure-checkout {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #747474;
+        font-size: 12px;
+    }
+    
+}

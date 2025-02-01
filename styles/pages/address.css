@@ -264,6 +264,12 @@ header h1 {
         font-size: 52px;
     }
 
+    .modal-content h2{
+        margin-top: 30px;
+        font-weight: 500;
+    
+    }
+
     .add-address-card{
         height: 150px;
     }
