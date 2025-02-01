@@ -1,29 +1,16 @@
 export function getEmailFromJWT(token) {
-  try {
-    if (!token || typeof token !== "string") {
-        throw new Error("Invalid token: Token is undefined or not a string");
+    try {
+      // Split the JWT into its components
+      const payloadBase64 = token.split('.')[1]; // Get the payload part
+      const decodedPayload = atob(payloadBase64); // Decode from Base64
+      const payload = JSON.parse(decodedPayload); // Parse as JSON
+      
+      // Extract the email from the payload
+      return payload.sub || null; // Return email if it exists, otherwise null
+    } catch (error) {
+      if(error.message.match("")){
+        console.error("Error decoding JWT:", error);
     }
-
-    const parts = token.split('.');
-    if (parts.length !== 3) {
-        throw new Error("Invalid JWT format");
+      return null;
     }
-
-    // Convert Base64URL to Base64
-    const base64 = parts[1].replace(/-/g, '+').replace(/_/g, '/');
-
-    // Decode from Base64
-    const decodedPayload = atob(base64);
-
-    // Parse as JSON
-    return JSON.parse(decodedPayload);
-} catch (error) {
-  const curerentWindow = window.location.href;
-  if(error.message.includes("Invalid token") && curerentWindow.match("/checkout.html" )){
-    window.location.href="./signin"
-      console.error("Error decoding JWT:", error.message);
-
-    }
-    return null;
-}
   }
