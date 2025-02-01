@@ -17,7 +17,7 @@ const params = new URLSearchParams(window.location.search);
 const storedData = getToken();
 if (!storedData) {
   console.error("Token not found, redirecting to sign-in.");
-  window.location.href = "/signin.html";
+  window.location.href = "/signin";
 } else {
   const token = storedData.token;
   const email = getEmailFromJWT(token);
@@ -50,7 +50,7 @@ console.log(amount);
       const data = await response.json();
       window.location.href = data.sessionUrl;
     } catch (error) {
-      window.location.href = "/signin.html";
+      window.location.href = "/signin";
       console.error("Payment error:", error);
     }
   };
@@ -75,7 +75,7 @@ console.log(amount);
       });
 
       if (!response.ok) {
-        window.location.href = "/signin.html";
+        window.location.href = "/signin";
         throw new Error(`HTTP error :( ${response.status}`);
       }
 

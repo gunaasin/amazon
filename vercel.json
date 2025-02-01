@@ -12,6 +12,7 @@
       { "source": "/signup", "destination": "/signup.html" },
       { "source": "/tracking", "destination": "/tracking.html" },
       { "source": "/userInfo", "destination": "/userInfo.html" },
+      { "source": "/dummy", "destination": "/dummy.html" },
       { "source": "/", "destination": "/index.html" }
     ]
 }

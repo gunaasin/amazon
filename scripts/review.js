@@ -229,7 +229,7 @@ function setupReviewForm() {
         
                 if (!response.ok) {
                     if (response.status === 403) {
-                        window.location.href="/signin.html";
+                        window.location.href="/signin";
                         console.warn("Access forbidden. Please check your token or permissions."); 
                       } 
                 }
