@@ -26,7 +26,7 @@ export async function loadCartFromBackend(token) {
     });
     const curerentWindow = window.location.href;
 
-    if (!response.ok && curerentWindow.match("/checkout.html" )) {
+    if (!response.ok && curerentWindow.match("/checkout" )) {
       console.error("Failed to fetch cart products. Redirecting to signin.");
       window.location.href = "/signin.html";
     
