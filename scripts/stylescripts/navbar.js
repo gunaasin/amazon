@@ -114,7 +114,7 @@ function loadNavBar(navInfo){
     <div class="amazon-header-nav">
         <h3 class="update-location-nav"><i class="fas fa-map-marker-alt"></i> &nbsp;${address === null ? "Update location" : address}</h3>
         <p class="delivery-location-nav">
-             Deliver to ${name}
+            ${name===null ? " update address" : `Deliver to ${name}` }
         </p>
     </div>
     <div class="mobile-nav-element">
