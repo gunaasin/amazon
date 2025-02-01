@@ -18,8 +18,6 @@ export function loadProductFromBackend() {
     },
   }).then((response) => {
 
-    console.log(response)
-
     return response.json();
   }).then((productData) => {
     products = productData.map((item) => {
