@@ -2,7 +2,7 @@
   font-family: "Work Sans", sans-serif;
 }
 .amazon-header {
-  background-color: rgb(19, 25, 33);
+  background-color: #131921;
   color: white;
   padding:0px 15px;
   display: flex;
@@ -314,6 +314,61 @@
   top: 10px;
   right: 15px;
 }
+
+
+/* side nav */
+
+
+.side-nav {
+  transition: 0.4s ease-in-out;
+  position: absolute;
+  right: -500px;
+  top: 48px;
+  width: 60vw;
+  height: 100vh;
+  background-color:#131921;
+}
+
+.side-nav-icons {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  height: 100px;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.459);
+}
+
+
+.side-nav-links {
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100%;
+}
+
+.side-nav-links a {
+  width: 100%;
+  background-color: var(--light-gray);
+  text-decoration: none;
+  color: rgb(199, 199, 199);
+  margin: 5px 20px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: 0.4s ease-in-out;
+
+  &:hover {
+    background-color: rgba(130, 130, 130, 0.189);
+  }
+
+  &:active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+}
+
 
 
 

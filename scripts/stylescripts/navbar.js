@@ -120,7 +120,7 @@ function loadNavBar(navInfo){
     <div class="mobile-nav-element">
             <!-- menu -->
             <label class="hamburger">
-                <input type="checkbox">
+                <input type="checkbox" id="toggole-btn">
                 <svg viewBox="0 0 32 32">
                     <path class="line line-top-bottom"
                         d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
@@ -130,7 +130,43 @@ function loadNavBar(navInfo){
             </label>
             <a href="amazonUser"><i class="fa-regular fa-user"></i></a>
     </div>
+
+     <div class="side-nav">
+            <div class="side-nav-links">
+                <a href="/" class="">Amazon Home</a>
+                <a href="/signin" class="">Sign in </a>
+                <a href="/Cart" class="">Cart</a>
+                <a href="/address" class="">Address</a>
+                <a href="/userInfo" class="">Account</a>
+            </div>
+     </div>
 `
+
+
+const toggoleBtn = document.getElementById('toggole-btn');
+const sideNav = document.querySelector('.side-nav');
+let sideNavVisible = false;  
+
+toggoleBtn.addEventListener('click', function () {
+    if (toggoleBtn.checked) {  
+        sideNav.style.right = '0';
+        sideNavVisible = true;
+    } else {
+        sideNav.style.right = '-500px';
+        sideNavVisible = false;
+    }
+});
+
+// Close when clicking outside
+document.addEventListener('click', function (event) {
+    const isClickInside = sideNav.contains(event.target) || toggoleBtn.contains(event.target);
+    if (!isClickInside && sideNavVisible) {
+        toggoleBtn.checked = false;  // Uncheck the checkbox
+        sideNav.style.right = '-500px';
+        sideNavVisible = false;
+    }
+});
+
 
 
 const searchBarData = document.getElementById("search-bar");
