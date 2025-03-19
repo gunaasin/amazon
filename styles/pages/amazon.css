@@ -77,7 +77,7 @@
 @media (max-width: 450px) {
   .products-grid {
     /* grid-template-columns: 0.75fr; */
-    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
