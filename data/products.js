@@ -6,11 +6,14 @@ export let cart = [];
 
 const loderHtml = document.querySelector(".loder_container");
 export function showLoader() {
+  console.log("show loder")
+  console.log("show loder")
   loderHtml.innerHTML = `<div class="loader"></div>`
 }
 
 function hideLoader() {
-    loderHtml.innerHTML = ``;
+  loderHtml.innerHTML = ``;
+  console.log("close loder")
 }
 
 
