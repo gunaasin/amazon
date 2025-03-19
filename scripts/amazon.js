@@ -54,8 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     someData.categories.length = 0;
     
     loadProductBasedOnSearch(keyword).then(() => {
-      
-      products.length=0;
       products.length === 0 ? loadProductNotFound() : loadTheProduct();
       loadFilterFunction();
     });
