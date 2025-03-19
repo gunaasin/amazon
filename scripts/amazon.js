@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (params.has("ds")) {
     const keyword = JSON.parse(atob(decodeURIComponent(params.get("ds")))); // Get the value of 'ds' // decode the value based on atob Base64
     someData.categories.length = 0;
-    products.length=0;
-    console.log(keyword);
+    
     loadProductBasedOnSearch(keyword).then(() => {
       
+      products.length=0;
       products.length === 0 ? loadProductNotFound() : loadTheProduct();
       loadFilterFunction();
     });
