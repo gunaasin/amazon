@@ -12,7 +12,7 @@ export function showLoader() {
 }
 
 function hideLoader() {
-  // loderHtml.innerHTML = ``;
+  loderHtml.innerHTML = ``;
   console.log("close loder")
 }
 
