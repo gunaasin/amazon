@@ -74,11 +74,11 @@
   }
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
   .products-grid {
     grid-template-columns: 0.75fr;
   }
-}
+} */
 
 .product-container {
   padding: 15px;
@@ -462,9 +462,8 @@ input[type="range"]::-webkit-slider-thumb {
 
 @media (max-width:450px) {
   .product-container {
-
     position: relative;
-    width: 80vw;
+    width: 90vw;
     height: fit-content;
   }
 }
