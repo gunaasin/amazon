@@ -6,7 +6,7 @@ export let cart = [];
 
 const loderHtml = document.querySelector(".loder_container");
 export function showLoader() {
- loderHtml.style.display = "flext";
+  loderHtml.style.display = "flext";
 }
 
 function hideLoader() {
@@ -53,8 +53,7 @@ export function loadProductFromBackend() {
 
 
 export function loadProductBasedOnSearch(keyword) {
- showLoader();
- products.length = 0;
+  showLoader();
   const promise = fetch(`${API_END_POINT}api/products/search?keyword=${keyword}`, {
     method: "GET",
     headers: {
@@ -62,10 +61,12 @@ export function loadProductBasedOnSearch(keyword) {
     }
   }
   ).then((response) => {
- 
+    products.length = 0;
+    
     return response.json();
   }).then((productData) => {
     hideLoader();
+    products.length = 0;
     products.push(...productData);
 
     console.log('products are loaded');

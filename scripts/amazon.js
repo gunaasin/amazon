@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     products.length=0;
     console.log(keyword);
     loadProductBasedOnSearch(keyword).then(() => {
+      
       products.length === 0 ? loadProductNotFound() : loadTheProduct();
       loadFilterFunction();
     });
