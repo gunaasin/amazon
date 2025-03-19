@@ -4,13 +4,23 @@ import { API_END_POINT } from "./api.js";
 export let products = [];
 export let cart = [];
 
+const loderHtml = document.querySelector(".loader");
+export function showLoader() {
+  loderHtml.style.display = "flex";
+}
+
+function hideLoader() {
+  loderHtml.style.display = "none";
+}
+
+
 export function loadProductFromBackend() {
 
   products.length = 0;
   const params = new URLSearchParams(window.location.search);
   const keywords = params.get("d");
   const main = document.querySelector(".amazon-body");
-
+  showLoader();
   const promise = fetch(`${API_END_POINT}api/main/products?enc=${keywords}`, {
     method: "GET",
     headers: {
@@ -20,17 +30,18 @@ export function loadProductFromBackend() {
 
     return response.json();
   }).then((productData) => {
-    products.length=0;
+    hideLoader();
+    products.length = 0;
     products = productData.map((item) => {
       return item;
     });
   }).catch((error) => {
 
     if (error.message.includes("Failed to fetch") || error.message.includes("NetworkError")) {
-        main.innerHTML = "";
-    console.error("some thing is wrong please try again later :(");
-    console.error(error);
-    main.innerHTML = pageNotFont404;
+      main.innerHTML = "";
+      console.error("some thing is wrong please try again later :(");
+      console.error(error);
+      main.innerHTML = pageNotFont404;
     }
 
   });
@@ -41,7 +52,7 @@ export function loadProductFromBackend() {
 
 
 export function loadProductBasedOnSearch(keyword) {
-  console.log(keyword)
+ showLoader();
   const promise = fetch(`${API_END_POINT}api/products/search?keyword=${keyword}`, {
     method: "GET",
     headers: {
@@ -51,7 +62,7 @@ export function loadProductBasedOnSearch(keyword) {
   ).then((response) => {
     return response.json();
   }).then((productData) => {
-
+    hideLoader();
     products.length = 0;
     products.push(...productData);
 
