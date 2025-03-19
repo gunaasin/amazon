@@ -4,13 +4,13 @@ import { API_END_POINT } from "./api.js";
 export let products = [];
 export let cart = [];
 
-const loderHtml = document.querySelector(".loader");
+const loderHtml = document.querySelector(".loder_container");
 export function showLoader() {
-  loderHtml.style.display = "flex";
+  loderHtml.innerHTML = `<div class="loader"></div>`
 }
 
 function hideLoader() {
-  loderHtml.style.display = "none";
+    loderHtml.innerHTML = ``;
 }
 
 
@@ -27,10 +27,10 @@ export function loadProductFromBackend() {
       "Content-Type": "application/json",
     },
   }).then((response) => {
-
+    hideLoader();
     return response.json();
   }).then((productData) => {
-    hideLoader();
+
     products.length = 0;
     products = productData.map((item) => {
       return item;
@@ -60,6 +60,7 @@ export function loadProductBasedOnSearch(keyword) {
     }
   }
   ).then((response) => {
+ 
     return response.json();
   }).then((productData) => {
     hideLoader();
