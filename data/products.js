@@ -54,6 +54,7 @@ export function loadProductFromBackend() {
 
 export function loadProductBasedOnSearch(keyword) {
  showLoader();
+ products.length = 0;
   const promise = fetch(`${API_END_POINT}api/products/search?keyword=${keyword}`, {
     method: "GET",
     headers: {
@@ -65,7 +66,6 @@ export function loadProductBasedOnSearch(keyword) {
     return response.json();
   }).then((productData) => {
     hideLoader();
-    products.length = 0;
     products.push(...productData);
 
     console.log('products are loaded');
